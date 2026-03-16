@@ -35,6 +35,7 @@ namespace IrishFarmSim
 			{
 				Debug.Log("Error - " + e);
 			}
+            Debug.Log(cameraController);
 	    }
 
 		void Update()
@@ -48,6 +49,12 @@ namespace IrishFarmSim
 
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
+
+            if (cameraController == null)
+            {
+                Debug.LogError("CameraController missing");
+                return 0;
+            }
 
             Vector3 camForward = cameraController.transform.forward;
             Vector3 camRight = cameraController.transform.right;
@@ -75,7 +82,15 @@ namespace IrishFarmSim
                 audioSource.Stop();
             }
 
-            controller.Move((inputVec + Vector3.up * -gravity) * Time.deltaTime);
+            //controller.Move((inputVec + Vector3.up * -gravity) * Time.deltaTime);
+
+            Vector3 velocity = inputVec;
+            if (controller.isGrounded == false)
+            {
+                velocity.y -= gravity * Time.deltaTime;
+            }
+            controller.Move(velocity * Time.deltaTime);
+
 
             if (freeRoam)
             {
