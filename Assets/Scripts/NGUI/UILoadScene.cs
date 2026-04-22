@@ -18,36 +18,41 @@ namespace IrishFarmSim
 				{
 					StartCoroutine(Load("Quit"));
 				}
-				else
+				else 
 				{
 					StartCoroutine(Load("Main Menu"));
 				}
 			}
 		}
-		
+        public void OnClick()
+        {
+            if (levelName.Equals("Quit"))
+            {
+                Debug.Log("EXIT CALLED");
+                Application.Quit();
+                return;
+            }
+            if (levelName.Equals("Farm"))
+            {
+                StartCoroutine(Load(levelName));
+                return;
+            }
+            NGUITools.Broadcast("End");
+            SceneManager.LoadScene(levelName);
+        }
 
-		public void OnClick()
+        private IEnumerator Load(string levelName) 
 		{
-			StartCoroutine(Load(levelName));
-		}
-
-		private IEnumerator Load(string levelName) 
-		{
-			yield return new WaitForSeconds(0.7f);
-
-			if (!string.IsNullOrEmpty(levelName))
+            yield return new WaitForSeconds(0.7f);
+            if (!string.IsNullOrEmpty(levelName))
 			{
-				if(levelName.Equals("Quit"))
+				if(levelName.Equals("Farm"))
 				{
-					Application.Quit();
-				}
-				else if(levelName.Equals("Farm"))
-				{
-					if(loadPlayer)
+					if (loadPlayer)
 					{
 						bool fileTest1 = File.Exists(Application.persistentDataPath + "/player.dat");
 						bool fileTest2 = File.Exists(Application.persistentDataPath + "/cows.dat");
-						
+
 						if (fileTest1 || fileTest2)
 						{
 							GameController.Instance().loadPlayer = true;
@@ -67,14 +72,8 @@ namespace IrishFarmSim
 							UIBackground.Background(false);
 						}
 					}
-					
-				else
-				{
-					NGUITools.Broadcast("End");
-					SceneManager.LoadScene(levelName);
-				}
+                }
 			}
-		}
 		}
 
 		private IEnumerator DelayReset(int seconds) 
