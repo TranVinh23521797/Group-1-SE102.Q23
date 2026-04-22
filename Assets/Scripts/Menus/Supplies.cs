@@ -7,12 +7,12 @@ namespace IrishFarmSim
 	{
 		void FixedUpdate () 
 		{
-			transform.Rotate (0, 2, 0);
+			//transform.Rotate (0, 2, 0);
 		}
 
 		void OnTriggerEnter(Collider other) 
 		{
-			if (other.gameObject.name.Equals ("Player"))
+			if (other.gameObject.name.Equals("Player"))
 			{
 				GameController.Instance().globalPlayerUI = true;
 			}
@@ -20,7 +20,7 @@ namespace IrishFarmSim
 
 		void OnTriggerExit(Collider other)
 		{
-			if (other.gameObject.name.Equals ("Player"))
+			if (other.gameObject.name.Equals("Player"))
 			{
 				GameController.Instance().globalPlayerUI = false;
 			}

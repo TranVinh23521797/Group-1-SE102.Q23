@@ -22,7 +22,7 @@ namespace IrishFarmSim
 			// Bidding on cow if within desired price range
 	        if (bid && Time.time > bidStartTime + bidWaitTime)
 	        {
-	            MartUI.BidOnCow(this, desiredPrice);  
+	            BidScript.BidOnCow(this, desiredPrice);  
 	            Animator animator = GetComponent<Animator>();
 	            animator.SetTrigger("Bid");
 	            StartCoroutine(SpawnBidSprite(transform.position));
@@ -35,7 +35,7 @@ namespace IrishFarmSim
 	            return;
 
 	        bidStartTime = Time.time;
-	        desiredPrice = currentPrice + Random.Range(700, 1200);
+	        desiredPrice = currentPrice + Random.Range(300, 700);
 	        bidWaitTime = Random.Range(5, 10);
 
 	        switch (cow.breed)

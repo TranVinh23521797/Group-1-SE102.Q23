@@ -105,7 +105,6 @@
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\ImageEffectBase.cs" />
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Tools\ScrollingUVs.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Scenes\Mart\MartUI.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\InventorySystem\Game\UIItemStorage.cs" />
     <Compile Include="Assets\Scripts\Bidder\Bidder.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UILocalize.cs" />
@@ -139,11 +138,13 @@
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\GrayscaleEffect.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\InventorySystem\Game\UIEquipmentSlot.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIImageButton.cs" />
+    <Compile Include="Assets\UI\Transparency.cs" />
     <Compile Include="Assets\Scripts\Scenes\Farm\FarmInit.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIButtonOffset.cs" />
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\UIWidget.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\TweenWidth.cs" />
+    <Compile Include="Assets\UI\CashDisplay.cs" />
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\NoiseEffect.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UITexture.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UISpriteAnimation.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\Other\WindowAutoYaw.cs" />
     <Compile Include="Assets\Scripts\Misc\CheckGC.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\PropertyReference.cs" />
+    <Compile Include="Assets\UI\TabButton.cs" />
     <Compile Include="Assets\Scripts\NGUI\UIBackground.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\SpringPanel.cs" />
@@ -170,6 +172,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\InventorySystem\Game\UIItemSlot.cs" />
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\ImageEffects.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIProgressBar.cs" />
+    <Compile Include="Assets\UI\NewSupplies.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\BMSymbol.cs" />
     <Compile Include="Assets\Scripts\Cow\Cow.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\Other\PanWithMouse.cs" />
@@ -184,6 +187,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UIAnchor.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\UIDrawCall.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\TweenAlpha.cs" />
+    <Compile Include="Assets\UI\BuySellAnimalUI.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\AnimatedColor.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\TweenVolume.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UIRoot.cs" />
@@ -196,6 +200,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIKeyBinding.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UIInput.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIToggle.cs" />
+    <Compile Include="Assets\UI\ListAnimal.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\Other\LoadLevelOnClick.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\TweenHeight.cs" />
@@ -209,6 +214,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\Other\LookAtTarget.cs" />
     <Compile Include="Assets\Scripts\Menus\MartTransition.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIDragScrollView.cs" />
+    <Compile Include="Assets\UI\BidScript.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIForwardEvents.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UIAtlas.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\TypewriterEffect.cs" />
@@ -219,6 +225,7 @@
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIEventTrigger.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Examples\Scripts\InventorySystem\System\InvAttachmentPoint.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIPopupList.cs" />
+    <Compile Include="Assets\UI\TabGroup.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\TweenRotation.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Tweening\AnimatedWidget.cs" />
     <Compile Include="Assets\Scripts\Scenes\Mart\MartInit.cs" />
@@ -233,6 +240,7 @@
     <Compile Include="Assets\3rd Party\Cartoon Town and Farm\Tools\Birds Swarm\Bird.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\NGUITools.cs" />
     <Compile Include="Assets\Scripts\Player\Farmer.cs" />
+    <Compile Include="Assets\UI\AddMoney.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Interaction\UIButtonMessage.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\UI\UICamera.cs" />
     <Compile Include="Assets\3rd Party\NGUI\Scripts\Internal\ActiveAnimation.cs" />
@@ -250,9 +258,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
@@ -264,6 +275,7 @@
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Masked 3.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
@@ -276,10 +288,12 @@
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Shaders\Unlit - Depth.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
@@ -288,6 +302,7 @@
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlur.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ScreenSpaceAmbientObscurance.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
@@ -300,6 +315,7 @@
     <None Include="Assets\3rd Party\Stonewall\readme.txt" />
     <None Include="Assets\3rd Party\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrection3DLut.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Masked 2.shader" />
@@ -316,16 +332,24 @@
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Resources\Localization.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\3rd Party\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Shaders\Refractive.shader" />
@@ -336,6 +360,7 @@
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrainDX11.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -345,23 +370,29 @@
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\3rd Party\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\!info.txt" />
     <None Include="Assets\3rd Party\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Text 1.shader" />
     <None Include="Assets\3rd Party\Cartoon Town and Farm\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\3rd Party\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -1457,10 +1488,6 @@
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
       <Private>False</Private>
@@ -1475,6 +1502,10 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Purchasing.Common">
@@ -1567,6 +1598,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Nobi.UiRoundedCorners.csproj">
+      <Project>{1288C83B-48F4-4341-671A-E7A5AE4B21C0}</Project>
+      <Name>Nobi.UiRoundedCorners</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

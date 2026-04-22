@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.IO;
 
@@ -9,44 +10,49 @@ namespace IrishFarmSim
 		public string levelName;
 		public bool loadPlayer;
 		public bool newGame;
-
 		void FixedUpdate() 
 		{
 			if (Input.GetKeyDown (KeyCode.Escape)) 
 			{
-				if(Application.loadedLevelName.Equals("Main Menu"))
+				if(SceneManager.GetActiveScene().name.Equals("Main Menu"))
 				{
 					StartCoroutine(Load("Quit"));
 				}
-				else
+				else 
 				{
 					StartCoroutine(Load("Main Menu"));
 				}
 			}
 		}
+        public void OnClick()
+        {
+            if (levelName.Equals("Quit"))
+            {
+                Debug.Log("EXIT CALLED");
+                Application.Quit();
+                return;
+            }
+            if (levelName.Equals("Farm"))
+            {
+                StartCoroutine(Load(levelName));
+                return;
+            }
+            NGUITools.Broadcast("End");
+            SceneManager.LoadScene(levelName);
+        }
 
-		public void OnClick()
+        private IEnumerator Load(string levelName) 
 		{
-			StartCoroutine(Load(levelName));
-		}
-
-		private IEnumerator Load(string levelName) 
-		{
-			yield return new WaitForSeconds(0.7f);
-
-			if (!string.IsNullOrEmpty(levelName))
+            yield return new WaitForSeconds(0.7f);
+            if (!string.IsNullOrEmpty(levelName))
 			{
-				if(levelName.Equals("Quit"))
+				if(levelName.Equals("Farm"))
 				{
-					Application.Quit();
-				}
-				else if(levelName.Equals("Farm"))
-				{
-					if(loadPlayer)
+					if (loadPlayer)
 					{
 						bool fileTest1 = File.Exists(Application.persistentDataPath + "/player.dat");
 						bool fileTest2 = File.Exists(Application.persistentDataPath + "/cows.dat");
-						
+
 						if (fileTest1 || fileTest2)
 						{
 							GameController.Instance().loadPlayer = true;
@@ -66,25 +72,7 @@ namespace IrishFarmSim
 							UIBackground.Background(false);
 						}
 					}
-					else
-					{
-						if(newGame)
-						{
-							GameController.Instance().newGame = true;
-							UIBackground.BackgroundDark(true);
-							UIBackground.LoadingTexture(true);
-							UIBackground.Background(false);
-							UIBackground.NameLabel(false);
-							UIBackground.InputField(false);
-							StartCoroutine(DelayLoadScene(1, levelName));
-						}
-					}
-				}
-				else
-				{
-					NGUITools.Broadcast("End");
-					Application.LoadLevel(levelName);
-				}
+                }
 			}
 		}
 
@@ -96,11 +84,10 @@ namespace IrishFarmSim
 			UIBackground.Logo(true);
 			UIBackground.Background(true);
 		}
-
 		private IEnumerator DelayLoadScene(int seconds, string levelName) 
 		{
 			yield return new WaitForSeconds(seconds);
-			Application.LoadLevel(levelName);
+			SceneManager.LoadScene(levelName);
 		}
 	}
 }
