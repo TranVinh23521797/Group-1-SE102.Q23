@@ -5,6 +5,7 @@ namespace IrishFarmSim
 {
 	public class MartTransition : MonoBehaviour
 	{
+		public GameObject martTransitionUI;
 		void FixedUpdate() 
 		{
 			transform.Rotate(0, 2, 0);
@@ -14,7 +15,7 @@ namespace IrishFarmSim
 		{
 			if (other.gameObject.name.Equals("Player"))
 			{
-				GameController.Instance().martSceneTransitionUI = true;
+				martTransitionUI.SetActive(true);
 			}
 		}
 		
@@ -22,7 +23,7 @@ namespace IrishFarmSim
 		{
 			if (other.gameObject.name.Equals("Player"))
 			{
-				GameController.Instance().martSceneTransitionUI = false;
+				martTransitionUI.SetActive(false);
 			}
 		}
 	}
