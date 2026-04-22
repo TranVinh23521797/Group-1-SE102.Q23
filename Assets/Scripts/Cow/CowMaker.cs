@@ -74,7 +74,7 @@ namespace IrishFarmSim
 			}
 
 			// Create new instance with random selection, then returning the cow instance
-			Cow cow = new Cow(cowType + " - Breed", Random.Range(1, 15), cowType, Random.Range(1, 10), Random.Range(5, 100), true, true, Random.Range(150, 400), GameController.GetSceneName());
+			Cow cow = new Cow(cowType + " Breed", Random.Range(1, 15), cowType, Random.Range(1, 10), Random.Range(5, 100), true, true, Random.Range(150, 400), GameController.GetSceneName());
 			return cow;
 		}
 	}
