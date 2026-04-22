@@ -15,7 +15,7 @@ namespace IrishFarmSim
 		public static bool bidding;
 		public static float timeRemaining;
 		public static float timeOfLastBid;
-		public static MartUI uiMart;
+		public static BidScript bidScript;
 		public static List<Bidder> bidderList;
 		public static List<Cow> cowsInMart;
 		public static GameObject cowList;

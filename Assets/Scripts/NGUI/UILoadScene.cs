@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.IO;
 
@@ -9,12 +10,11 @@ namespace IrishFarmSim
 		public string levelName;
 		public bool loadPlayer;
 		public bool newGame;
-
 		void FixedUpdate() 
 		{
 			if (Input.GetKeyDown (KeyCode.Escape)) 
 			{
-				if(Application.loadedLevelName.Equals("Main Menu"))
+				if(SceneManager.GetActiveScene().name.Equals("Main Menu"))
 				{
 					StartCoroutine(Load("Quit"));
 				}
@@ -24,6 +24,7 @@ namespace IrishFarmSim
 				}
 			}
 		}
+		
 
 		public void OnClick()
 		{
@@ -66,26 +67,14 @@ namespace IrishFarmSim
 							UIBackground.Background(false);
 						}
 					}
-					else
-					{
-						if(newGame)
-						{
-							GameController.Instance().newGame = true;
-							UIBackground.BackgroundDark(true);
-							UIBackground.LoadingTexture(true);
-							UIBackground.Background(false);
-							UIBackground.NameLabel(false);
-							UIBackground.InputField(false);
-							StartCoroutine(DelayLoadScene(1, levelName));
-						}
-					}
-				}
+					
 				else
 				{
 					NGUITools.Broadcast("End");
-					Application.LoadLevel(levelName);
+					SceneManager.LoadScene(levelName);
 				}
 			}
+		}
 		}
 
 		private IEnumerator DelayReset(int seconds) 
@@ -96,11 +85,10 @@ namespace IrishFarmSim
 			UIBackground.Logo(true);
 			UIBackground.Background(true);
 		}
-
 		private IEnumerator DelayLoadScene(int seconds, string levelName) 
 		{
 			yield return new WaitForSeconds(seconds);
-			Application.LoadLevel(levelName);
+			SceneManager.LoadScene(levelName);
 		}
 	}
 }
