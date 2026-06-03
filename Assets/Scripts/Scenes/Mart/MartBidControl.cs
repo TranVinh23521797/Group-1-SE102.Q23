@@ -20,5 +20,6 @@ namespace IrishFarmSim
 		public static List<Cow> cowsInMart;
 		public static GameObject cowList;
 		public static Cow biddingCow;
+		public static bool isSellMode;  // True khi SELL flow (ListAnimal), False khi BUY flow (BidScript)
 	}
 }

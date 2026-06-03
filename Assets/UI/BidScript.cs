@@ -9,7 +9,6 @@ namespace IrishFarmSim
 {
     public class BidScript : MartInit
     {
-        private GameObject scrollCowList;
         private CameraController cameraControl;
         public TextMeshProUGUI cash;
         public TextMeshProUGUI age;
@@ -56,8 +55,8 @@ namespace IrishFarmSim
 
         void Update()
         {
-            // Kiểm tra hết giờ bidding
-            if (MartBidControl.bidding)
+            // Kiểm tra hết giờ bidding - CHỈ trong BUY mode, KHÔNG trong SELL mode
+            if (MartBidControl.bidding && !MartBidControl.isSellMode)
             {
                 MartBidControl.currentTimer = (int)(MartBidControl.timeRemaining - (Time.time - MartBidControl.timeOfLastBid));
 
@@ -103,6 +102,11 @@ namespace IrishFarmSim
 
         public void CowBuyStartBid()
         {
+            // Ensure we're NOT in SELL mode - this is BUY flow
+            MartBidControl.isSellMode = false;
+            Debug.Log("=== BUY FLOW STARTED ===");
+            Debug.Log($"isSellMode set to FALSE - BUY mode active");
+
             if (MartBidControl.cowsInMart.Count == 0)
             {
                 Debug.LogWarning("No cows available in mart!");
@@ -111,6 +115,7 @@ namespace IrishFarmSim
 
             GameController.Instance().cowIndex = Random.Range(0, MartBidControl.cowsInMart.Count);
             MartBidControl.biddingCow = MartBidControl.cowsInMart[GameController.Instance().cowIndex];
+            Debug.Log($"Cow selected: {MartBidControl.biddingCow.name}");
 
             LookAtRing();
             BeforeBidUI.SetActive(false);
@@ -199,6 +204,7 @@ namespace IrishFarmSim
             {
                 BidUI.SetActive(false);
                 BeforeBidUI.SetActive(false);
+                BuySellAnimalUI.SetActive(true);
 
                 if (cameraControl != null)
                     cameraControl.FollowPlayer();
@@ -228,13 +234,16 @@ namespace IrishFarmSim
 
             if (GameController.Instance().cows.Contains(MartBidControl.biddingCow))
             {
+                Debug.Log("❌ ERROR: Cow is in player inventory! This should only happen in SELL flow!");
                 GameController.Instance().player.cash += MartBidControl.currentCowBid;
                 GameController.Instance().cows.Remove(MartBidControl.biddingCow);
             }
             else
             {
+                Debug.Log("✓ Cow is in cowsInMart - BUY flow correct");
                 if (MartBidControl.playerBidLast)
                 {
+                    Debug.Log($"✓ Player WON! Spending {MartBidControl.currentCowBid} VND");
                     GameController.Instance().player.cash -= MartBidControl.currentCowBid;
                     GameController.Instance().cows.Add(MartBidControl.biddingCow);
                     MartBidControl.cowsInMart.Remove(MartBidControl.biddingCow);
@@ -242,6 +251,7 @@ namespace IrishFarmSim
                 }
                 else
                 {
+                    Debug.Log("❌ Player LOST!");
                     MartBidControl.cowsInMart.Remove(MartBidControl.biddingCow);
                     bidLost.SetActive(true);
                 }
@@ -253,8 +263,8 @@ namespace IrishFarmSim
                 Destroy(MartBidControl.biddingCow.cowController.gameObject);
 
             ClearStats();
-            BeforeBidUI.SetActive(true);
             BidUI.SetActive(false);
+            BuySellAnimalUI.SetActive(true);
             
             if (cameraControl != null)
                 cameraControl.FollowPlayer();
@@ -312,6 +322,9 @@ namespace IrishFarmSim
 
         public static void EndBiddingRound()
         {
+            if (MartBidControl.bidderList == null || MartBidControl.bidderList.Count == 0)
+                return;
+            
             foreach (Bidder bidder in MartBidControl.bidderList)
                 bidder.StopBidding();
         }
